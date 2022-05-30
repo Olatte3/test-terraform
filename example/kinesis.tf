@@ -138,6 +138,9 @@ resource "aws_kinesis_firehose_delivery_stream" "firehose" {
     kinesis_stream_arn = "arn:aws:kinesis:ap-northeast-2:896673219691:stream/terraform-datastream"
     role_arn = "${aws_iam_role.firehose_role.arn}"
   }
+  depends_on = [
+    aws_elasticsearch_domain.aos
+  ]
 }
 resource "aws_s3_bucket" "streamb" {
   bucket = "streamb"

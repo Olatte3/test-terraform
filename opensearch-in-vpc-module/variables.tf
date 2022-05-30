@@ -15,22 +15,27 @@ variable "opensearch_version" {
 
 variable "aos_data_instance_count" {
   type = number
+  default = 1
 }
 
 variable "aos_data_instance_type" {
   type = string
+  default = "t3.small.elasticsearch"
 }
 
 variable "aos_data_instance_storage" {
   type = number
+  default = 10
 }
 
 variable "aos_master_instance_count" {
   type = number
+  default = 0
 }
 
 variable "aos_master_instance_type" {
   type = string
+  default = "t3.small.elasticsearch"
 }
 
 variable "aos_encrypt_at_rest" {

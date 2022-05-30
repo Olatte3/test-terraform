@@ -8,6 +8,13 @@ terraform {
       version = "4.12.1"
     }
   }
+  cloud {
+    organization = "Olatte"
+
+    workspaces {
+      name = "terraform-workspace"
+    }
+  }
 }
 
 locals {

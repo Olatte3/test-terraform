@@ -1,5 +1,5 @@
 module "opensearch_example" {
-  source = "../opensearch-in-vpc-module/"
+  source = "../opensearch-in-vpc-module"
   aos_domain_name = "terraform-domain"
   aos_data_instance_count = 1
   aos_data_instance_type = "t3.small.elasticsearch"

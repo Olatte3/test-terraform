@@ -139,8 +139,8 @@ resource "aws_kinesis_firehose_delivery_stream" "firehose" {
     role_arn = "${aws_iam_role.firehose_role.arn}"
   }
   depends_on = [
-    opensearch_example
-    #aws_elasticsearch_domain.aos
+    #opensearch_example
+    aws_elasticsearch_domain.aos
   ]
 }
 resource "aws_s3_bucket" "streamb" {

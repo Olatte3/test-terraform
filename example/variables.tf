@@ -17,7 +17,8 @@ variable "tags" {
 
 variable "aos_domain_name" {
   type = string
-  description = "Name for Elasticsearch domain, also used as prefix for related resources."
+  default = "terraform-domain"
+  //description = "Name for Elasticsearch domain, also used as prefix for related resources."
 }
 
 variable "opensearch_version" {
